@@ -10,7 +10,6 @@ const StudentCard = ({ student, onDelete }) => {
 
   return (
     <Card className="shadow-sm h-100 border-0 rounded-4 overflow-hidden">
-      {/* Image Section */}
       <div
         style={{
           height: "220px",
@@ -38,7 +37,6 @@ const StudentCard = ({ student, onDelete }) => {
         />
       </div>
 
-      {/* Info Section */}
       <Card.Body className="text-center">
         <Card.Title className="fw-bold fs-4">
           {student.name} {student.surname}
@@ -48,9 +46,10 @@ const StudentCard = ({ student, onDelete }) => {
           <div><strong>🎂 DOB:</strong> {student.dob}</div>
           <div><strong>📆 Admission:</strong> {student.admissionDate}</div>
           <div><strong>📍 Address:</strong> {student.address}</div>
+          <div><strong>📧 Email:</strong> {student.gmail }</div>
+          <div><strong>📱 Mobile:</strong> {student.mobile }</div>
         </Card.Text>
 
-        {/* Action Buttons */}
         <div className="d-flex flex-wrap justify-content-center gap-2 mt-3">
           <Link to={`/view-student/${student.id}`}>
             <Button variant="info" size="sm">View</Button>
